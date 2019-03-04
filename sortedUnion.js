@@ -5,4 +5,12 @@
  * The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
  * Check the assertion tests for examples.
  */
-// WTF?!
+function uniteUnique(arr) {
+    let uniqueArr = [], args = Array.from(arguments);
+    args.forEach(arr => {
+      arr.forEach(num => {
+        if (uniqueArr.length === 0 || !uniqueArr.includes(num)) uniqueArr.push(num)
+      })
+    })
+    return uniqueArr;
+  }
